@@ -21,7 +21,7 @@ class PortScanner:
         try:
             sock = socket.socket()
             sock.settimeout(1.0)
-            sock.connect_ex((self.target, port))
+            sock.connect((self.target, port))
             sock.close()
             return True
         
