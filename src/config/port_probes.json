@@ -1,0 +1,42 @@
+{
+  "80": {
+    "name": "HTTP",
+    "payload": "HEAD / HTTP/1.1\r\nHost: target\r\nUser-Agent: SecurityScanner/1.0\r\nConnection: close\r\n\r\n",
+    "type": "client_first"
+  },
+  "443": {
+    "name": "HTTPS",
+    "payload": "HEAD / HTTP/1.1\r\nHost: target\r\nUser-Agent: SecurityScanner/1.0\r\nConnection: close\r\n\r\n",
+    "type": "client_first"
+  },
+  "21": {
+    "name": "FTP",
+    "payload": "",
+    "type": "server_first"
+  },
+  "22": {
+    "name": "SSH",
+    "payload": "",
+    "type": "server_first"
+  },
+  "25": {
+    "name": "SMTP",
+    "payload": "EHLO target\r\n",
+    "type": "client_first"
+  },
+  "110": {
+    "name": "POP3",
+    "payload": "CAPA\r\n",
+    "type": "client_first"
+  },
+  "143": {
+    "name": "IMAP",
+    "payload": "A001 CAPABILITY\r\n",
+    "type": "client_first"
+  },
+  "default": {
+    "name": "Generic Fallback",
+    "payload": "\r\n\r\n",
+    "type": "client_first"
+  }
+}
